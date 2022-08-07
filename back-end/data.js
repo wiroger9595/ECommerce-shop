@@ -1,6 +1,24 @@
+import bcrypt from "bcryptjs";
+
 const data = {
+  users: [
+    {
+      name: "Key",
+      email: "key01@sample.com",
+      password: bcrypt.hashSync("123456"),
+      isAdmin: true,
+    },
+    {
+      name: "Amy",
+      email: "amy02@sample.com",
+      password: bcrypt.hashSync("56789"),
+      isAdmin: false,
+    },
+  ],
+
   products: [
     {
+      // _id: "1",
       name: "Coco nut drink",
       category: "drink",
       image: "/images/p1.jpeg",
@@ -13,6 +31,7 @@ const data = {
       description: "very popular and health drink",
     },
     {
+      // _id: "2",
       name: "Coco nut water drink",
       category: "drink",
       image: "/images/p2.jpeg",
@@ -25,6 +44,7 @@ const data = {
       description: "very popular and health drink",
     },
     {
+      // _id: "3",
       name: "Aloe drink",
       category: "drink",
       image: "/images/p3.jpeg",
@@ -37,6 +57,7 @@ const data = {
       description: "very popular and health drink",
     },
     {
+      // _id: "4",
       name: "Aloe mango drink",
       category: "drink",
       image: "/images/p4.jpeg",
